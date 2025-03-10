@@ -1,185 +1,159 @@
+<script setup>
+import { ref, onMounted, onUnmounted, computed } from "vue";
+import Header from "./Header.vue";
+import Cardpl from "./cardsPreços/350.vue";
+import Cardp2 from "./cardsPreços/500.vue";
+import Preco129 from "./cardsPreços/129.vue";
+const tamanhoTela = ref(window.innerWidth);
+
+const Mobile = computed(() => tamanhoTela.value <= 1021);
+const Desktop = computed(() => tamanhoTela.value > 1021);
+
+const atualizarTamanhoTela = () => {
+  tamanhoTela.value = window.innerWidth;
+};
+
+onMounted(() => {
+  window.addEventListener("resize", atualizarTamanhoTela);
+});
+
+onUnmounted(() => {
+  window.removeEventListener("resize", atualizarTamanhoTela);
+});
+</script>
+
 <template>
-  <Header />
-  <div
-    class="containerPR w-full h-[400px] bg-[#E8EAEE] text-center flex flex-col gap-8 justify-center items-center"
-  >
-    <div class="flex flex-col gap-4">
-      <h1 class="font-bold text-6xl mobile:text-3xl">
-        CONEXÃO SEM LIMITES PARA VOCÊ
-      </h1>
-      <p class="text-base mobile:text-sm">
-        A REDFOX te mantem conectado e oferece as melhores condições para você
-        aproveitar o máximo sem <br class="mobile:hidden" />
-        se preocupar!
-      </p>
-      <div class="font-bold text-4xl mobile:text-2xl">
-        <h1>COMBO FAMÍLIA REDFOX & MAX</h1>
+  <div v-show="Desktop" class="containerFull">
+    <Header />
+    <div class="parte1">
+      <div class="conteudo1">
+        <h1 class="text-[#333333] font-bold">CONEXÃO SEM LIMITES PARA VOCÊ</h1>
+        <p class="">
+          A REDFOX te mantem conectado e oferece as melhores condições para você
+          aproveitar o máximo sem <br />
+          se preocupar!
+        </p>
+        <h1 class="text-[#333333] font-bold">COMBO FAMÍLIA REDFOX & MAX</h1>
       </div>
     </div>
-  </div>
-  <div
-    class="meulherFundoflex flex flex-col gap-8 justify-center items-center w-full h-[90vh]"
-  >
-    <div class="justify-start items-center gap-4 w-2/4">
-      <a href="#"><img src="../assets/fundomue.png" alt="" /></a>
+    <div class="parte2">
+      <div class="conteudo2">
+        <Preco129 />
+      </div>
     </div>
-  </div>
-  <div
-    class="containerP w-full h-[58vh] bg-[#d3021f] text-center flex flex-col gap-8 justify-center items-center"
-  >
-    <div class="responsivo1">
-      <h1 class="font-bold text-white text-5xl mobile:text-2xl">
-        OS MELHORES PLANOS, OS MELHORES PREÇOS
-      </h1>
-    </div>
-    <div class="responsivo0">
-      <div class="responsivo1 flex flex-row gap-4 mobile:flex-col">
-        <div
-          class="responsivo2 flex w-80 mobile:w-full items-center flex-col gap-4"
-        >
-          <img class="w-50 mobile:w-32" src="../assets/notebook.svg" alt="" />
-          <p class="text-white mobile:text-sm">
-            +150 canais AO VIVO para você aproveitar, assista onde e como
-            quiser!*Incluso em planos a partir de R$99,90*
-          </p>
-          <a class="text-white underline mobile:text-sm" href="#">SAIBA MAIS</a>
+    <div class="parte3">
+      <div class="conteudo3">
+        <div>
+          <h2 style="color: aliceblue">
+            OS MELHORES PLANOS COM SEUS APPS FAVORITOS
+          </h2>
         </div>
-        <div class="responsivo3 flex flex-row gap-4 mobile:gap-2">
-          <a href="#"
-            ><img class="img12 mobile:w-16" src="../assets/350.png" alt=""
-          /></a>
-          <a href="#"
-            ><img class="img12 mobile:w-16" src="../assets/500.png" alt=""
-          /></a>
-          <a href="#"
-            ><img class="img12 mobile:w-16" src="../assets/700.png" alt=""
-          /></a>
+        <div class="apps">
+          <div class="apps1">
+            <div><Cardpl /></div>
+            <div><Cardp2 /></div>
+          </div>
         </div>
       </div>
     </div>
+    <div class="parte 4"></div>
   </div>
-  <div
-    class="ultima-section flex flex-col gap-20 justify-center items-center w-full h-[85vh] bg-[#E6E8ED]"
-  >
-    <div>
-      <h1 class="font-bold text-5xl mobile:text-2xl">
-        DESEMPENHO DE PONTA PARA A SUA CASA
-      </h1>
-    </div>
-    <div class="flex flex-row gap-4 mobile:flex-col mobile:gap-8">
-      <div>
-        <a href="#">
-          <img class="w-full mobile:w-64" src="../assets/129pro.svg" alt="" />
-        </a>
-      </div>
-      <div>
-        <a href="#">
-          <img class="w-full mobile:w-64" src="../assets/179pro.svg" alt="" />
-        </a>
-      </div>
-    </div>
-    <div>
-      <Botaozap />
-    </div>
-  </div>
-  <a href="#"><div class="responsivoF w-full h-[80vh]"></div></a>
-  <Footer />
+  <div v-show="Mobile" class="containerFull">oi (Mobile)</div>
 </template>
 
 <style scoped>
-.responsivoF {
-  background-image: url(../assets/157.svg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.apps {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+.apps1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5rem;
+}
+.conteudo3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px;
+  gap: 1rem;
+}
+.parte3 {
   width: 100%;
+  height: 80dvh;
+  background-color: #ac0118;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 28px;
 }
-.meulherFundoflex {
-  background-image: url(../assets/fundomulher.svg);
-  background-size: cover;
+
+h2 {
+  font-size: 1.9rem !important;
+  font-weight: bold;
+}
+.conteudo2 {
+  display: flex;
+  height: 80%;
+  width: 70%;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+}
+
+.parte2 {
+  width: 100%;
+  height: 80vh;
+  background-image: url("../assets/fundomulher.svg");
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: start !important;
 }
 
-@media (max-width: 768px) {
-  .responsivoF {
-    height: 200px !important;
-  }
-  .containerPR {
-    height: 300px;
-  }
-
-  .containerP {
-    height: auto;
-    padding: 20px 0;
-  }
-
-  .responsivo3 {
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  .responsivo0 {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .responsivo2 {
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .responsivo1 {
-    flex-direction: column;
-  }
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  p {
-    font-size: 0.9rem;
-  }
-
-  .meulherFundoflex {
-    display: none;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
-  .img12 {
-    width: 70px;
-  }
+.conteudo1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px;
+  gap: 1rem;
 }
-@media (max-width: 768px) {
-  .responsivoF {
-    height: 400px;
-  }
-  .ultima-section {
-    height: auto;
-    padding: 40px 0;
-    gap: 40px;
-  }
+h1 {
+  font-size: 1.9rem !important;
+}
+.parte1 {
+  width: 100%;
+  height: 20vh;
+  background-color: #e8eaee;
+  align-items: center;
+  justify-content: center;
+}
 
-  .ultima-section h1 {
-    font-size: 1.8rem;
-    text-align: center;
-    padding: 0 20px;
-  }
+.container {
+  width: 100%;
+  height: 100vh; /* Ou tente height: 100dvh */
+}
 
-  .ultima-section img {
-    width: 100%;
-    max-width: 200px;
-  }
+.containerFull {
+  width: 100%;
+  height: 100%;
+  background-color: #d9d9d9;
+  align-items: center;
+  justify-content: center;
 }
 </style>
-
-<script setup>
-import Botaozap from "./Botaozap.vue";
-import Footer from "./Footer.vue";
-import Header from "./Header.vue";
-</script>
