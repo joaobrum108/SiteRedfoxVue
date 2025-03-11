@@ -1,7 +1,7 @@
 <template>
   <!-- Header 1 -->
   <div
-    class="header1 flex justify-around items-center bg-[#d9d9d9] p-2 h-[30px] text-xs"
+    class="header1 flex justify-around items-center bg-[#d9d9d9] p-2 h-[30px] text-[10px]"
   >
     <div class="flex gap-2">
       <router-link
@@ -199,7 +199,7 @@ const toggleMenu = () => {
 };
 
 const verificarTamanhoTela = () => {
-  if (window.innerWidth <= 700) {
+  if (window.innerWidth <= 600) {
     teladesktop.value = false;
     telamobile.value = true;
   } else {

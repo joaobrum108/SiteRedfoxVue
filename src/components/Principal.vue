@@ -3,7 +3,10 @@ import { ref, onMounted, onUnmounted, computed } from "vue";
 import Header from "./Header.vue";
 import Cardpl from "./cardsPreços/350.vue";
 import Cardp2 from "./cardsPreços/500.vue";
-import Preco129 from "./cardsPreços/129.vue";
+import Precos129 from "../components/cardsPreços/preco129.vue";
+import Preco179 from "./cardsPreços/preco179.vue";
+import Mobile1 from "../screen/mobile1.vue";
+
 const tamanhoTela = ref(window.innerWidth);
 
 const Mobile = computed(() => tamanhoTela.value <= 1021);
@@ -38,7 +41,7 @@ onUnmounted(() => {
     </div>
     <div class="parte2">
       <div class="conteudo2">
-        <Preco129 />
+        <Precos129 />
       </div>
     </div>
     <div class="parte3">
@@ -56,9 +59,64 @@ onUnmounted(() => {
         </div>
       </div>
     </div>
-    <div class="parte 4"></div>
+    <div class="parte4">
+      <div class="ttle1">
+        <h1
+          style="
+            font-size: 2rem;
+            font-weight: bold;
+            font-family: 'Poppins', sans-serif;
+          "
+        >
+          DESEMPENHO DE PONTA PARA A SUA CASA
+        </h1>
+      </div>
+      <div class="caixas">
+        <div style="align-items: center">
+          <span style="font-size: 1rem; font-weight: bold"
+            >* 150 Cainais AO VIVO e 5 Telas simultãneas</span
+          >
+          <br />
+          <br />
+          <Precos129 />
+        </div>
+        <div>
+          <span style="font-size: 1rem; font-weight: bold"
+            >* 150 Cainais AO VIVO e 5 Telas simultãneas</span
+          >
+          <br />
+          <br />
+          <Preco179 />
+        </div>
+      </div>
+      <div>
+        <button
+          style="
+            background-color: #ff4d4d;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 15px 30px;
+            border: none;
+            width: 250px;
+            border-radius: 25px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease,
+              box-shadow 0.3s ease;
+          "
+          onmouseover="this.style.backgroundColor='#ff1a1a'; this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 12px rgba(0, 0, 0, 0.3)';"
+          onmouseout="this.style.backgroundColor='#ff4d4d'; this.style.transform='scale(1)'; this.style.boxShadow='0 4px 6px rgba(0, 0, 0, 0.2)';"
+        >
+          ASSINE JÁ
+        </button>
+      </div>
+    </div>
+    <div class="partefinal"></div>
   </div>
-  <div v-show="Mobile" class="containerFull">oi (Mobile)</div>
+  <div v-show="Mobile" class="containerFull">
+    <Mobile1 />
+  </div>
 </template>
 
 <style scoped>
@@ -67,6 +125,32 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+.partefinal {
+  background-image: url(../assets/ff.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80vh;
+}
+.caixas {
+  display: flex;
+  flex-direction: row;
+  gap: 9rem;
+}
+.parte4 {
+  background-color: #d9d9d9;
+  background-image: url(../assets/g.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8rem;
 }
 .apps {
   display: flex;
