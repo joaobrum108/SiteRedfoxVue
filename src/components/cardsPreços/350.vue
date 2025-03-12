@@ -84,6 +84,54 @@ button:hover {
   background-color: #05c753;
   color: white;
 }
+@media (max-width: 500px) {
+  .caixaWhite {
+    background-color: white;
+    color: red;
+    width: 130px;
+    height: 90px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 18px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    transition: background-color 0.3s ease, transform 0.3s ease,
+      box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+  .top-text {
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  .top-text1 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+  }
+  button {
+    padding: 10px 20px;
+    width: 125px;
+    height: 35px;
+    font-size: 0.8rem !important;
+    cursor: pointer;
+    background-color: #06eb62;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 2rem;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  button:hover {
+    background-color: #05c753;
+    box-shadow: 0 0 10px rgba(5, 199, 83, 0.8);
+  }
+}
 </style>
 
 <script setup></script>

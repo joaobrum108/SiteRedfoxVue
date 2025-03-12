@@ -1,5 +1,8 @@
 <script setup>
 import Header from "../components/Header.vue";
+import Precopromo from "../components/cardsPreços/350.vue";
+import Precopromos from "../components/cardsPreços/500.vue";
+import Preco129 from "../components/cardsPreços/preco129.vue";
 </script>
 <template>
   <Header />
@@ -48,7 +51,10 @@ import Header from "../components/Header.vue";
         </div>
       </div>
     </div>
-    <div class="section2"></div>
+    <div class="section2">
+      <div><Precopromo /></div>
+      <div><Precopromos /></div>
+    </div>
     <div class="section3">
       <div class="box">
         <span
@@ -56,6 +62,10 @@ import Header from "../components/Header.vue";
             DESEMPENHO DE PONTA PARA A SUA CASA
           </h1></span
         >
+      </div>
+      <div>
+        <Preco129 />
+        <Preco179 />
       </div>
     </div>
   </div>
@@ -71,6 +81,11 @@ import Header from "../components/Header.vue";
 .section2 {
   background-color: #ac0734;
   height: 30vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 15px;
+  gap: 15px;
 }
 .section3 {
   background-color: #fff;

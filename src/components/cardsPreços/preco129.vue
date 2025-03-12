@@ -134,6 +134,9 @@
 .card-horizontal:hover::before {
   left: 100%;
 }
+
+@media (max-width: 500px) {
+}
 </style>
 
 <script setup>
