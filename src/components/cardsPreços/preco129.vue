@@ -135,7 +135,69 @@
   left: 100%;
 }
 
-@media (max-width: 500px) {
+@media (min-width: 200px) and (max-width: 1100px) {
+  .card-horizontal {
+    background: linear-gradient(135deg, #db0e35, #ff6b6b);
+    color: white;
+    width: 200px;
+    height: 105px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+  }
+  .card-image img {
+    width: 110px;
+    height: 50px;
+    transition: transform 0.3s ease;
+  }
+  .card-title {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffcc00;
+    transition: color 0.3s ease;
+  }
+
+  .card-subtitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  .button-container {
+    display: flex;
+    align-items: center;
+    width: 200px;
+    height: 0.2rem;
+    gap: 0;
+  }
+
+  .button-icon {
+    width: 50%;
+    height: 25px;
+    transition: transform 0.3s ease;
+  }
+
+  .card-button {
+    padding: 10px 20px;
+    width: 50%;
+    height: 25px;
+    background-color: #06eb62;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 0.5rem;
+    border-radius: 0 0 15px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
 }
 </style>
 

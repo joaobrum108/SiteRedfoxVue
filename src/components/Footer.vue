@@ -5,7 +5,6 @@
     <div
       class="CaixaInterna flex flex-row justify-center items-center bg-[#2d2d2d] h-[40vh] text-white border border-[#3d3d3d] p-4 w-[80%] gap-8"
     >
-      <!-- Caixa 1: Logo e Informações -->
       <div class="SubCaixa flex justify-center items-center">
         <div class="InformacoesFox1 flex flex-col gap-4">
           <div class="flex justify-center items-center">
@@ -21,10 +20,9 @@
         </div>
       </div>
 
-      <!-- Caixa 2: Navegação -->
       <div class="CaixaNavegacao">
         <div class="Navegacao1">
-          <h2 class="font-semibold">Navegação</h2>
+          <h2 class="font-semibold"><strong>Navegação</strong></h2>
         </div>
         <div>
           <a
@@ -38,10 +36,9 @@
         </div>
       </div>
 
-      <!-- Caixa 3: Contato -->
       <div class="CaixaContato flex flex-col gap-4">
         <div class="CaixaContato1">
-          <h2 class="font-semibold">Contato</h2>
+          <h2 class="font-semibold"><strong>Contato</strong></h2>
         </div>
         <div>
           <a

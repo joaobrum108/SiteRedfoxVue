@@ -6,7 +6,7 @@ import Cardp2 from "./cardsPreços/500.vue";
 import Precos129 from "../components/cardsPreços/preco129.vue";
 import Preco179 from "./cardsPreços/preco179.vue";
 import Mobile1 from "../screen/mobile1.vue";
-
+import Footer from "./Footer.vue";
 const tamanhoTela = ref(window.innerWidth);
 
 const Mobile = computed(() => tamanhoTela.value <= 1021);
@@ -113,6 +113,7 @@ onUnmounted(() => {
       </div>
     </div>
     <div class="partefinal"></div>
+    <Footer />
   </div>
   <div v-show="Mobile" class="containerFull">
     <Mobile1 />

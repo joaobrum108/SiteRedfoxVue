@@ -3,6 +3,7 @@ import Header from "../components/Header.vue";
 import Precopromo from "../components/cardsPreços/350.vue";
 import Precopromos from "../components/cardsPreços/500.vue";
 import Preco129 from "../components/cardsPreços/preco129.vue";
+import Preco179 from "../components/cardsPreços/preco179.vue";
 </script>
 <template>
   <Header />
@@ -63,11 +64,20 @@ import Preco129 from "../components/cardsPreços/preco129.vue";
           </h1></span
         >
       </div>
-      <div>
+      <div
+        style="
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 3rem;
+        "
+      >
         <Preco129 />
         <Preco179 />
       </div>
     </div>
+    <div class="bannerF"></div>
   </div>
 </template>
 <style scoped>
@@ -93,7 +103,7 @@ import Preco129 from "../components/cardsPreços/preco129.vue";
   background-position: 60% !important;
   background-repeat: no-repeat;
   background-size: 80vh;
-  height: 60vh;
+  height: 55vh;
 }
 .box {
   display: flex;
@@ -101,5 +111,13 @@ import Preco129 from "../components/cardsPreços/preco129.vue";
   justify-content: center;
   align-items: center;
   padding: 2rem;
+}
+.bannerF {
+  height: 20vh;
+  width: 100%;
+  background-image: url(../assets/ff.svg);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 </style>

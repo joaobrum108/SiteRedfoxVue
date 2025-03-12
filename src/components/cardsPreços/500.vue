@@ -83,7 +83,7 @@ button:hover {
   background-color: #05c753;
   color: white;
 }
-@media (max-width: 500px) {
+@media (min-width: 200px) and (max-width: 1100px) {
   .caixaWhite {
     background-color: white;
     color: red;
@@ -96,8 +96,8 @@ button:hover {
     border-radius: 18px;
     padding-top: 20px;
     padding-bottom: 20px;
-    transition: background-color 0.3s ease, transform 0.3s ease,
-      box-shadow 0.3s ease;
+    transition: background-color 0.3s ease,
+      transform 0.3s ease box-shadow 0.3s ease;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
   }
