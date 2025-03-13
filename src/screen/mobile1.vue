@@ -4,6 +4,7 @@ import Precopromo from "../components/cardsPreços/350.vue";
 import Precopromos from "../components/cardsPreços/500.vue";
 import Preco129 from "../components/cardsPreços/preco129.vue";
 import Preco179 from "../components/cardsPreços/preco179.vue";
+import Footer from "../components/Footer.vue";
 </script>
 <template>
   <Header />
@@ -78,6 +79,7 @@ import Preco179 from "../components/cardsPreços/preco179.vue";
       </div>
     </div>
     <div class="bannerF"></div>
+    <Footer />
   </div>
 </template>
 <style scoped>

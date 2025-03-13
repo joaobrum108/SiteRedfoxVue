@@ -117,4 +117,47 @@ button {
 button:hover {
   background: rgba(255, 61, 0, 1);
 }
+
+@media (max-width: 600px) {
+  .form-container {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .form-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .form-title::after {
+    width: 40px;
+    height: 2px;
+  }
+
+  input {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  button {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  .form-title {
+    font-size: 18px;
+  }
+
+  input {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  button {
+    padding: 6px;
+    font-size: 12px;
+  }
+}
 </style>

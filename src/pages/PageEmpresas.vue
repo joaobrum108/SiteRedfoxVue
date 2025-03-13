@@ -54,7 +54,9 @@
     </div>
   </div>
 
-  <div v-show="Mobile" class="containerFull"></div>
+  <div v-show="Mobile" class="containerFull">
+    <Mobilecorporativo />
+  </div>
 </template>
 
 <script setup>
@@ -83,6 +85,7 @@ import CardInfo from "../components/CardInfo.vue";
 import CardInfo2 from "../components/CardInfo2.vue";
 import BtnAS from "../components/BtnAS.vue";
 import Sanfornas from "../components/sanfornas.vue";
+import Mobilecorporativo from "../screen/mobilecorporativo.vue";
 </script>
 
 <style scoped>

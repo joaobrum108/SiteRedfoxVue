@@ -41,20 +41,27 @@ const props = defineProps({
   width: 48%;
 }
 
-.left-content h3,
-.right-content h3 {
+.left-content h3 {
   margin-bottom: 10px;
   font-size: 1.5em;
+  color: #f3f3f3;
 }
 
-.left-content p,
-.right-content p {
+.left-content p {
   font-size: 1em;
   line-height: 1.5;
+  color: #f3f3f3;
 }
 
-@media (max-width: 1000px) and (min-width: 200px) {
+.right-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media (max-width: 1000px) {
   .card {
+    width: 80%;
     flex-direction: column;
     padding: 15px;
   }
@@ -62,6 +69,64 @@ const props = defineProps({
   .left-content,
   .right-content {
     width: 100%;
+  }
+
+  .left-content h3 {
+    font-size: 1.2em;
+  }
+
+  .left-content p {
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .left-content h3 {
+    font-size: 1em;
+  }
+
+  .left-content p {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 400px) {
+  .card {
+    width: 95%;
+    padding: 8px;
+  }
+
+  .left-content h3 {
+    font-size: 1em;
+  }
+
+  .left-content p {
+    font-size: 0.7em;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 200px) {
+  .card {
+    width: 95%;
+    padding: 8px;
+  }
+
+  .left-content h3 {
+    font-size: 0.9rem;
+  }
+
+  .left-content p {
+    font-size: 0.6rem !important;
+    line-height: 1.4;
+  }
+  img {
+    width: 180px !important;
   }
 }
 </style>
