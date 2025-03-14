@@ -1,5 +1,4 @@
 <template>
-  <!-- Header 1 -->
   <div
     class="header1 flex justify-around items-center bg-[#d9d9d9] p-2 h-[30px] text-[10px]"
   >
