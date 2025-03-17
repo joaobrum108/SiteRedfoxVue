@@ -231,7 +231,7 @@ h1 {
 
 .container {
   width: 100%;
-  height: 100vh; /* Ou tente height: 100dvh */
+  height: 100vh;
 }
 
 .containerFull {

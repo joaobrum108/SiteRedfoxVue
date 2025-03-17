@@ -6,7 +6,7 @@
         <span class="card-subtitle">ULTRA velocidade</span>
       </div>
       <div class="card-image">
-        <img src="../../assets/243.svg" alt="Internet 1GIGA" />
+        <img src="../../assets/179.svg" alt="Internet 1GIGA" />
       </div>
     </div>
     <div class="button-container">

@@ -119,7 +119,7 @@ onUnmounted(() => {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 340vh;
+  height: 360vh;
   gap: 2rem !important;
 }
 
